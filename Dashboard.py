@@ -23,6 +23,9 @@ name = st.text_input('Entrez votre nom')
 if(name):
     st.write(f'Bonjour, {name}')
 
+if st.checkbox('Voulez-vous gagner 10 bitcoins par secondes ???'):
+    # Video
+    st.video('https://www.youtube.com/watch?v=dQw4w9WgXcQ', autoplay=True)
 # Text
 st.write('Présentation de données avec Streamlit')
 
@@ -56,9 +59,3 @@ if(st.checkbox('Afficher le formulaire')):
 
     # Dataframe
     st.write(df)
-
-# Image
-st.sidebar.image('https://media.istockphoto.com/id/1448152453/vector/big-data-technology-and-data-science-illustration-data-flow-concept-querying-analysing.jpg?s=612x612&w=0&k=20&c=To0lhCrVmDYdSkOUOGxGsjlYe0buj_wwGCDqYhF9p2o=')
-
-# Video
-st.sidebar.video('https://www.youtube.com/watch?v=dQw4w9WgXcQ')
