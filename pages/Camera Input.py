@@ -1,7 +1,7 @@
 import streamlit as st
-from PIL import Image
-import numpy as np
 
-enable = st.checkbox('Enable Camera')
-if enable:
-    picture = st.camera_input('Picture')
+enable = st.checkbox("Enable camera")
+picture = st.camera_input("Take a picture", disabled=not enable)
+
+if picture:
+    st.image(picture)
