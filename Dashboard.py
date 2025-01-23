@@ -1,6 +1,12 @@
 import streamlit as st 
 import pandas as pd
 import seaborn as sns
+import os
+
+try : 
+    st.sidebar.write(st.secrets['API_KEY'])
+except :
+    st.sidebar.error('API_KEY not found')
 
 st.set_page_config(
     page_title='My Dashboard',
