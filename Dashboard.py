@@ -3,18 +3,6 @@ import pandas as pd
 import seaborn as sns
 import os
 
-try : 
-    st.sidebar.write(st.secrets['API_KEY'])
-except :
-    st.sidebar.error('API_KEY not found')
-
-st.set_page_config(
-    page_title='My Dashboard',
-    page_icon='🖖',
-    layout='centered', 
-    initial_sidebar_state='auto'
-)
-
 df = pd.read_csv('https://raw.githubusercontent.com/Quera-fr/Python-Programming/refs/heads/main/data.csv')
 
 # Title
@@ -35,8 +23,17 @@ if st.checkbox('Voulez-vous gagner 10 bitcoins par secondes ???'):
 # Text
 st.write('Présentation de données avec Streamlit')
 
+try : 
+    st.sidebar.write(st.secrets['API_KEY'])
+except :
+    st.sidebar.error('API_KEY not found')
 
-
+st.set_page_config(
+    page_title='My Dashboard',
+    page_icon='👀',
+    layout='centered', 
+    initial_sidebar_state='auto'
+)
 
 # Checkbox
 if(st.checkbox('Afficher le formulaire')):
